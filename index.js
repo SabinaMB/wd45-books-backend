@@ -7,7 +7,7 @@ const { Pool } = require('pg');
 
 const pool = new Pool({ connectionString: process.env.ELEPHANT_SQL_CONNECTION_STRING });
 app.use(express.json());
-// app.use(cors())
+app.use(cors())
 
 app.get('/', (req, res) => {
   res.send('hello world');
